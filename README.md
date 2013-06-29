@@ -16,9 +16,10 @@ I provide:
 
 
 ## Work Sample
-[www.asigcasa.ro](http://www.asigcasa.ro)
-[couponwallet](http://www.webfirme.ro/couponwallet/deals.html)
-[wonderjunk](http://www.webfirme.ro/wonderjunk/project_7/)
-[www.inspiredexteriors.com.au](http://www.inspiredexteriors.com.au/)
-[www.kobipets.com](http://www.kobipets.com)
-[www.different.com.au](http://www.different.com.au/)
+
+* [www.asigcasa.ro](http://www.asigcasa.ro)
+* [couponwallet](http://www.webfirme.ro/couponwallet/deals.html)
+* [wonderjunk](http://www.webfirme.ro/wonderjunk/project_7/)
+* [www.inspiredexteriors.com.au](http://www.inspiredexteriors.com.au/)
+* [www.kobipets.com](http://www.kobipets.com)
+* [www.different.com.au](http://www.different.com.au/)
