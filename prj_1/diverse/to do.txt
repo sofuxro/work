@@ -1,0 +1,60 @@
+SA STUDIEZ footeru
+
+
+9:33 PM 6/27/20139:56 PM 6/27/2013
+
+
+Birau Salagean Angela
+Ap 2 camere PB. ET.1 
+Str.Bumbacului 
+Tel:0740523818
+
+
+
+/*.middle { width:100%;
+            .horbar { }
+            section {  }
+            .bigtitle, .title { height:53px;  }
+            .title { height:43px; }
+            .slider_wrapper { height:379px; 
+                .slider {
+                    .item { 
+                        img { width:114px; height:217px; }
+                        h3  { }
+                    }
+                }
+            }
+            .slider_left, .slider_right { 
+                &:hover { }
+                &.inactive { }
+            }
+            .slider_left  {   }
+            .slider_right { }
+
+            .wrapper {
+                nav { height:43px; 
+                    a { width:162px; height:28px;
+                        &:hover, &.active { }
+                    }
+                }
+                .galery {  }
+                .film { width:33.33%; 
+                    img {  }
+                    h3 { 
+                        span { }
+                    }
+                    p {  
+                        span { }
+                    }         
+                }
+                button { height:19px; 
+                    &:hover { }
+                    &:after { }
+                }
+            }
+        }*/
+
+
+
+
+

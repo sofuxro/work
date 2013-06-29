@@ -1,0 +1,67 @@
+Some specs to help you. Font user is Roboto Condensed
+http://www.google.com/fonts/specimen/Roboto+Con...
+
+1 - MENU
+When clicked, shows a fancy drop down menu (you choose the best design for it) with this options:
+* Meu perfil
+* Minhas traduções (only for user role "translator")
+* Legendas baixadas
+* Legendas enviadas
+* Sugestões enviadas
+
+2 - SEARCH BOX
+Search will suggest results while user is still typing
+
+3 - LOGIN BOX
+Sigin dropdown like twitter. Designer will send me the PSD for that.. but if you think you can make some
+fancy login box, fine!
+
+4a - When mouse hover the poster, it shows a "tool-tip" (something like "8" explanation)
+4b - When user click the arrow, all four poster is changed
+
+5 - SLIDESHOW: Sometimes we have long titles. If the title is too long like The Lord Of The Rings: The Fellowship of the Ring it will probably use more than 2 lines. Well, when the page loads, it will show the title break at the end of the second line. When mouse hover the title, it will show the entire title, even if it overlap some other element.
+5 - BELLOW: same as above, but I think we can work with more lines before cut the text
+
+6 & 7 & 8 & 9 - When mouse hover, it can show a fancy effect. Thats yout call :)
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+
+
+
+
+Download page. - 02-Ltv_light_download_01-explanation.jpg
+
+1 & 2 - Original title and Portuguese Title. Sometimes titles can be very long. If it take more than 1 line, then the plot right bellow need be cutted accordingly
+
+3 - Means "Read more". Show the rest of plot on same page.
+
+4 - Uploader who sent the subtitle. Its a link to the search page with all of this uploads.
+
+5 - This bar works just like YouTube rating bar. People 'like' or 'dislike' a subtitle. Then the results of a subtitle rating is show in the bar.
+
+6 - Here is there people like or dislike subtitles. When mouse hover/click, some fancy effect occurs. When user click on DISLIKE, a mini text form then opens so user can say WHY heres disliking the subtitle.
+
+7 - Correcting the text, its SUGERIR CORREÇÃO. When clicked, a text form opens so users can send text (no characters limiting here) to the subtitle uploader. It can be a form in the same page with a ENVIAR (send) button.
+
+8 - Description for the subtitle. The uploader send a subtitle with its description, who translated it, etc. Initially, it shows 25 lines of text. A discret "ver mais" (show more) shows all the description text.
+If theres someting like www.example.com or http://example.com or test@example.com in the text description, it needs to be converted into a link (open new window)
+
+9 - User logged in.
+
+10 - Comment form. Theres a minimum text lenght: 30 characteres. POSTAR COMENTÁRIO button initially shows as blue. When use click insithe de comment form, it will show RED while the text lenght is <30.
+
+11 - Shows max of 3 lines per comment. A "ver mais" (show more) shows the rest of comment.
+
+12 - In portuguese: "Este comentário foi útil?". When mouse hover in (-) or (+) theres some effect.
+
+13 - MODERADOR, ADMINISTRADOR and LEGENDER. In psd it's all in english and plural. Please correct it.
+
+14 - Shows 10 more comments each time its clicked.
