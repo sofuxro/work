@@ -65,7 +65,7 @@
                 </div>
                 <div class="subtitle">
                     <p>Antes de enviar uma legenda, recomendamos a leitura dos tópicos relacionados em nossa página de suporte!</p></div>
-                <section class="selection spacing">
+                <section class="selection spacing border">
                     <label for=""><span class="number">01</span>SELECIONE O TITULO DO FILME OU SÉRIE</label>
                     <form action="test" method="GET" class="short_search">
                         <input type="text" value="" placeholder="" />
@@ -160,15 +160,14 @@
 
                 <button class="slider_right"></button>
             </section>    
-            <section class="details spacing">
+            <section class="details spacing border">
                 <form action="test" method="GET" class="short_search">
                     <label> <span class="number">02</span>RELEASE</label> <input type="text">
                     <label> <span class="number">03</span>IDIOMA</label> <input type="text">
                     <input type="submit" class="short">
                 </form>
             </section>
-            <div class="wrapper">
-                <div class="gallery">
+            <section class="spacing border">
                     <aside>
                         <label> <span class="number">04</span>OBSERVAÇÕES</label>
                         <textarea name="" id="" cols="30" rows="30"></textarea>
@@ -177,7 +176,7 @@
                     <div class="horbar"></div>
                     <aside>
                         <label> <span class="number">05</span>AUTORIA DA LEGENDA</label>
-                        <section class="spacing">
+                        <section class="spacing border">
                             <input type="radio" class="circle"><h6></span>Esta legenda foi traduzida por outra pessoa.</h6>
                             <p>Estou enviando porque encontrei em outro lugar, eu fiz alterações no texto ou sincronia.</p>
                             <form action="test" method="GET" class="short_search">
@@ -185,11 +184,10 @@
                                 <input type="submit" value="OK" />
                             </form>
                         </section>
-                        <section class="spacing">
-                            <input type="radio" class="circle"> <h6>Esta é uma legenda traduzida e sincronizada por mim</h6>
-                            <div class="clear"></div>
-                            <input type="checkbox" class="circle"> <p>Eu gostaria que esta legenda aparecesse na página inicial, se possivel</p>
-                                <input type="submit" class="gray" value="MAIS" /> 
+                        <section class="spacing border">
+                            <h6><input type="radio" class="circle">Esta é uma legenda traduzida e sincronizada por mim</h6>
+                            <p> <input type="checkbox" class="circle">Eu gostaria que esta legenda aparecesse na página inicial, se possivel <input type="submit" class="gray" value="MAIS" /></p>
+                                 
                         </section>
                         <section class="spacing">
                             <label> <span class="number">06</span>ARQUIVO DA LEGENDA (em .rar ou .zip)</label>
@@ -199,9 +197,7 @@
                             </form>
                         </section>
                     </aside>
-
-                </div>
-            </div> <!-- end of wrapper    -->
+            </section>
             <section class="spacing">
                 <button class="style1">ENVIAR LEGENDA</button> 
                 <form action="test" method="GET" class="agree">
@@ -209,8 +205,6 @@
                     <input type="checkbox" class="circle" value="" />
                 </form>        
             </section>
-            
-
 
             <div class="clear"></div>    
         </div> <!-- END OF MIDDLE -->
