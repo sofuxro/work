@@ -109,7 +109,7 @@ body { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; overflow-x:
     }
     .icon_handup { width:20px; height:20px; background:url(../img/sprite_1.png) 2px -31px; vertical-align:middle; display:inline-block; }
     .icon_handlow { width:20px; height:20px; background:url(../img/sprite_1.png) 2px -51px; vertical-align:middle; display:inline-block; }
-
+    .icon_arrow_down { width:30px; height:30px; background:url(../img/sprite_1.png) -185px 0; vertical-align:middle; display:inline-block; }
 
 
 
@@ -123,6 +123,10 @@ body { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; overflow-x:
         .horbar { height:300px; float:left; margin:0 30px; border:1px solid #bcbec0; }
         section { position:relative; }
         .bigtitle, .title { height:53px; background:url(../img/sprite_3.png) 0 -110px; background-size:101% auto; margin:0 0 31px 0; color:#fff; font-size:25px; line-height:53px; text-align:center; }
+        .subtitle { 
+            p { margin-top:-30px; font-size:15px; text-align:center; color:#58595b; }
+        }
+        .titles { font-size:15px; text-align:center; line-height:40px; color:#58595b; }
         .title { height:43px; background-position:0 -165px; margin: 20px 0 20px -6px; line-height:43px; }
         .slider_wrapper { width:960px; height:379px; position:relative; margin:0 auto 50px; overflow:hidden;
             .slider { width:4000px; height:379px; position:absolute; top:0; left:0; border-bottom:1px dotted #848587;
@@ -300,7 +304,88 @@ body { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; overflow-x:
 
 
 
+/*
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////// LEGENDAS
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
+
+.legendas {
+    section { overflow:hidden; border-bottom: 1px solid #848587; }
+    .gallery {
+        aside { width:45%; float:left; margin-right:10px; line-height:20px;
+            .short_search { width:100%; margin-left:20px;
+                input { margin-top:10px; }
+                input[type="text"] { width:70%; height:31px; float:left; border:1px solid #BCBEC0; font-size:15px; }
+                input[type="submit"] { width:none; float:left; background:@blue_1; box-shadow:0 none; border:1px solid #BCBEC0; font-size:15px; color:#fff; }
+                
+            }  
+            h6 { font-size:15px; color:#58595b; } 
+            p { font-size:11px;}
+            label { 
+                .number { float:left; position:static; }
+            }
+            textarea { width:100%; height:260px; border:1px solid #BCBEC0; box-shadow: 0 2px 4px 0 #BCBEC0 inset; }
+            input[type="submit"] { box-shadow:0 none; }
+        }
+        
+    }
+    input.gray { background:#939596; float:right; }
+    .number { margin-right:10px; font-size:40px; color:#c2c3c6; vertical-align:middle; }
+    .circle { width:2%; float:left; border:1px solid #BCBEC0; font-size:15px; }
+    .style1 { height:39px; background:@blue_1; position:relative; padding:2px 12px 2px 24px; margin:20px auto; border-radius:0; color:#fff; font-size:16px; font-weight:bold; display:block;
+                &:hover { background-color:#5688CE; }
+                &:after { content:' '; width:40px; height:40px; background:url(../img/sprite_1.png) -67px -32px; position:absolute; top:0; left:-38px; display:block; }
+    }
+    .agree { width:31%; margin:auto; text-align:center; 
+        input { height:31px; float:left; margin-left:-10px; }
+        label { margin-left:-10px; font-size:11px; line-height:31px; color:#58595b; }
+    }
+    .spacing { padding:30px 0; }
+}
+.selection { overflow:hidden; 
+    label { float:left; margin-right:10px; font-size:15px; line-height:31px;  }
+    input[type="text"] { height:31px; float:left; border:1px solid #BCBEC0; box-shadow: 0 2px 4px 0 #BCBEC0 inset; font-size:15px; }
+    input[type="submit"] { width:140px; height:25px; background:@blue_2; float:left; border-radius:12px; color:#fff; display:block;
+                &:hover { background-color:@blue_1; }
+    }
+}
+
+.short_search { width:60%; position:relative; float:left; color:#58595b; overflow:hidden;
+            input[type="text"] { width:64%; height:31px; float:left; margin-right:10px; border:1px solid #BCBEC0; font-size:15px; }
+            input[type="submit"] { height:25px; background:@blue_2; float:left; box-shadow:0 none; border-radius:12px; color:#fff; display:block;
+                &:hover { background-color:@blue_1; }
+            }
+            input.icon_zoom { width:25px; height:25px; background:@blue_2 url(../img/sprite_1.png) -83px -0px; position:absolute; top:0; right:9px; border-radius:12px; display:block;
+                &:hover { background-color:@blue_1; }
+            }
+            div { width:360px; background-color:#E6E7E8; position:absolute; top:62px; left:12px; padding:8px 0 8px; z-index:1;
+                &:before { content:' '; width:400px; height:19px; background:url(../img/sprite_1.png) 0 -228px no-repeat; position:absolute; top:0; left:-11px; }
+                &:after  { content:' '; width:378px; height:91px; background:url(../img/sprite_1.png) 0 -137px; position:absolute; bottom:-91px; left:-15px; }
+                button   { width:100%; height:29px; padding:0 10px; border-bottom:1px solid #DCDDDE; color:#000; font-size:15px; text-align:left; display:block;
+                    &:hover { background-color:#F3F3F4; }
+                }
+            }
+        }
+.details { overflow:hidden;
+    label { float:left; margin-right:10px; font-size:15px; line-height:31px; color:#231f20; }
+    input.short { width:30px; height:30px; background:url(../img/sprite_1.png) -185px -0px; position:absolute; top:0; right:10px; border-radius:0; display:block; }
+    .short_search { width:100%;
+        input[type="text"] { width:34%; height:31px; float:left; border:1px solid #BCBEC0; box-shadow: 0 2px 4px 0 #BCBEC0 inset; font-size:15px; }
+
+    }
+
+}
+
+aside {
+    section {
+        input[type="text"] { width:440px; height:31px; float:left; border:1px solid #BCBEC0; font-size:15px; }
+        input[type="submit"] { width:60px; height:25px; background:@blue_2; float:left; border-radius:12px; font-size:15px; display:block;
+                &:hover { background-color:@blue_1; }
+        }
+    }
+}
 
 /*
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
