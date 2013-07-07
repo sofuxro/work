@@ -7,6 +7,7 @@ $(function() {
             this.search();
             this.tabs();
             this.pagination();
+            this.file_upload();
 
             $(document).click(function(e) {
                 if($(e.target).parents('.menu').length === 0) {
@@ -254,8 +255,34 @@ $(function() {
                     });
                 });
             }
-        } /* END OF PAGINATION */
-    
+        }, /* END OF PAGINATION */
+
+
+
+    /*
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ///////////// FILE UPLOAD
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+        file_upload: function() {
+            var parent = $('.file_upload'),
+                input  = parent.find('input');
+
+            input.before('<div class="fake_input"></div>');
+
+            parent.on('mouseenter', function() {
+                parent.mousemove(function(e) {
+                    input.css({'top': e.pageY - parent.offset().top - 15, 'left': e.pageX - parent.offset().left - 50});
+                });
+            });
+            parent.on('mouseleave', function() {
+                parent.unbind('mousemove');
+            });
+            input.change(function() {
+                parent.find('.fake_input').html(input.val());
+            });
+        }
+        
     
     };
 
