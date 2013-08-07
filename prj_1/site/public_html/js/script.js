@@ -9,6 +9,8 @@ $(function() {
             this.pagination();
             this.file_upload();
 
+            this.menu_page();
+
             $(document).click(function(e) {
                 if($(e.target).parents('.menu').length === 0) {
                     $('.container > header .menu .dropdown').hide('slow');
@@ -120,7 +122,7 @@ $(function() {
                 slider_w = slider.children().length * item_w;
                 slider.css('width', slider_w);
 
-                slider.parent().siblings('.slider_left, .slider_right').click(function() {
+                slider.parent().siblings('.slider_left, .slider_right').click(function(e) {
                     var that = $(this);
 
                     if(!that.hasClass('inactive') && !in_action) {
@@ -148,6 +150,8 @@ $(function() {
 
                         }
                     }
+
+                    e.preventDefault();
                 });
             }
         }, /* END OF SLIDER */
@@ -165,18 +169,17 @@ $(function() {
 
             if(tabs_wrapper.length > 0) {
                 tabs_wrapper.each(function() {
-                    var tab = $(this);
-
-                    tab.on('click', 'nav a', function(e) {
-                        var that  = $(this),
-                            index = that.index();
+                    $(this).on('click', 'nav a', function(e) {
+                        var that     = $(this),
+                            contents = that.parent().siblings();
+                            index    = that.index();
 
                         if(!that.hasClass('active')){
                             that.siblings('.active').removeClass('active');
                             that.addClass('active');
 
-                            tab.children('div').find('.gallery:visible').hide();
-                            $(tab.children('div').children()[index]).show();
+                            contents.children('div:visible').hide();
+                            $(contents.children('div')[index]).show();
                         }
 
                         e.preventDefault();
@@ -199,7 +202,7 @@ $(function() {
             if(pag_wrapper.length > 0) {
                 pag_wrapper.each(function() {
                     var pagination = $(this),
-                        siblings   = pagination.siblings('.clearfix'),
+                        siblings   = pagination.siblings(),
                         buttons    = null,
                         index      = 0,
                         new_index  = 0,
@@ -281,10 +284,28 @@ $(function() {
             input.change(function() {
                 parent.find('.fake_input').html(input.val());
             });
+        },
+
+
+
+    /*
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ///////////// MENU
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+        menu_page: function() {
+            if($('.js_datepicker').length > 0) {
+                $('.js_datepicker').find('input').datepicker({ dateFormat: "dd.mm.yy" });
+
+                $('.js_datepicker').click(function() {
+                    $(this).find('input').datepicker('show');
+                });
+            }
         }
         
     
-    };
+    }
+
 
 
 

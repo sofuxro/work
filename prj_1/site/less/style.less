@@ -34,11 +34,12 @@ html, body { height:100%; min-height:100%; }
 
 
 body { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; overflow-x:hidden; }
-textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
+textarea, input { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
 .container { width:940px; min-height:100%; position:relative; margin:0 auto; padding:0 0 214px; }
 .logo { filter:alpha(opacity=85); opacity:0.85;
     &:hover { filter:alpha(opacity=100); opacity:1; }
 }
+.f_left { float:left; }
 
 
 
@@ -122,6 +123,117 @@ textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
 
 /*
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////// Common
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+    .btn { height:19px; background:@blue_1; position:relative; padding:2px 12px 2px 24px; margin:16px 0 0; color:#fff; font-size:10px;
+        &:hover { background-color:#5688CE; }
+        &:after { content:' '; width:19px; height:19px; background:url(../img/sprite_1.png) -19px -32px; position:absolute; top:0; left:0; display:block; }
+    }
+
+
+    .btn_green_circle, .btn_red_circle { width:13px; height:13px; position:relative; margin:0 2px 0 0; border-radius:7px; border:1px solid transparent;
+        &:after { content:' '; width:9px; height:9px; background-color:#50B848; position:absolute; top:1px; left:1px; border-radius:5px; filter:alpha(opacity=50); opacity:0.5; display:block; }
+        &.active, &:hover { border:1px solid #C8C8C9;
+            &:after { filter:alpha(opacity=100); opacity:1; }
+        }
+    }
+    .btn_red_circle:after { background-color:#F00; }
+
+    .btn_star { width:13px; height:13px; background:url(../img/sprite_1.png) -121px -48px; margin:0 2px 0 0;
+        &.active, &:hover { background-position:-108px -48px; }
+    }
+
+    .btn_pencil { width:13px; height:13px; background:url(../img/sprite_1.png) -134px -48px; margin:0 2px 0 0; filter:alpha(opacity=80); opacity:0.8;
+        &:hover { filter:alpha(opacity=100); opacity:1; }
+    }
+
+
+    .middle .list_element { padding:17px 0 38px; overflow:hidden;
+        article { width:50%; min-width:470px; float:left; padding:0;
+            & > div { width:95%; padding:10px 0; border-bottom:1px dotted #848587;
+                &:after { content:' '; clear:both; display:table; }
+                & > div:before { content:' '; clear:both; display:table; }
+            }
+            p { color:#231F20; font-size:14px; font-weight:bold; line-height:15px; }
+            .number { width:40px; float:left; padding:0 10px 27px; color:#C2C3C6; font-size:20px; text-align:right; }
+            .data { padding:6px 0 0; color:#58595B; font-size:13px; font-weight:normal; }
+            img { float:right; margin:2px 0 0; display:block; }
+        }
+    }
+
+
+    .js_tabs.style_1 > nav { height:43px; background:url(../img/sprite_3.png) 0 -60px; background-size:101% auto; margin:0 0 17px; padding:19px 62px 0; text-align:center; overflow:hidden;
+        a { min-width:90px; height:28px; position:relative; padding:0 3%; color:#fff; line-height:25px; font-size:14px; text-align:center; text-transform:uppercase; display:inline-block;
+            &:hover, &.active { background:#fff; color:@gray_1; text-decoration:none;
+                &:before, &:after { content:' '; width:10px; height:1px; position:absolute; top:0; border-top:30px solid transparent; }
+                &:before { left:-18px; border-right:8px solid #FFF; }
+                &:after  { right:-15px; border-left:5px solid #FFF;}
+            }
+        }
+    }
+
+    .js_tabs.style_2 > nav { background-image:none; padding:8px 0 0; border-bottom:1px solid @gray_2; text-align:center;
+        a { background-color:#FFF; margin:0 0 -1px; padding:0 7%; color:@gray_1; font-size:14px; line-height:27px; text-transform:uppercase; display:inline-block;
+            &.active { border:1px solid @gray_2; border-bottom:1px solid #FFF; }
+        }
+    }
+
+
+    .items_info { padding:32px 0 0;
+        & > div { margin:0 0 32px; padding:0 0 32px; border-bottom:1px dashed @gray_3; overflow:hidden;
+            figure { position:relative; float:left; margin:0 20px 0 0;
+                span { width:80px; height:80px; background-color:#FDB62A; position:absolute; bottom:-14px; right:-10px; border-radius:40px; color:@blue_1; font-size:24px; text-align:center; line-height:77px; display:block;
+                    b { font-size:36px; }
+                }
+            }
+            .info_overflow { width:42%; height:257px; float:left; margin:0 20px 44px 0; padding:0 20px 0 0; overflow-y:scroll;
+                .info_content { color:@gray_1; font-size:15px; }
+                h2 { padding:0 0 25px; color:@blue_1; font-size:20px; text-transform:uppercase; }
+                h3 { padding:0 0 23px; text-transform:uppercase; }
+                p  { line-height:22px; }
+            }
+            .link { width:42%; float:left; color:@blue_1;
+                a { color:@blue_1; }
+            }
+            .dates { width:290px; float:left;
+                & > div { padding:0 0 20px; color:@gray_1;
+                    label { width:130px; display:inline-block; }
+                    div, input { width:140px; float:right; padding:0 0 0 30px; color:@gray_1; text-align:left; }
+                    input { height:17px; padding:0 0 0 29px; }
+                    &.inactive label, &.inactive div { color:#A3A4A6; }
+                }
+                .js_datepicker { position:relative; cursor:pointer;
+                    label { cursor:pointer; }
+                    &:after { content:' '; width:19px; height:18px; background:url(../img/sprite_1.png) -215px 0; position:absolute; top:-2px; right:0; display:block; }
+                }
+            }
+        }
+    }
+
+
+    .item_text { padding:32px 0 0;
+        & > div { margin:0 0 32px; border-bottom:1px dashed @gray_3; color:@gray_1; overflow:hidden;
+            .left { width:35%; min-width:320px; float:left; margin:0 0 32px; font-size:13px; }
+            .btn.style1, .btn.style2 { height:25px; padding:2px 12px 2px 29px; font-style:12px; font-weight:bold; text-transform:uppercase;
+                &:after { width:25px; height:25px; background-position:-186px -29px; }
+            }
+            .btn.style2:after { background-position:-186px -54px; }
+            h2 { padding:0 0 25px; color:@blue_1; font-size:20px; text-transform:uppercase; }
+            p { line-height:19px;
+                &.style_1 { padding:0 0 45px; }
+            }
+            .right { width:65%; min-width:480px; height:287px; float:left; margin:0 0 32px; overflow-y:scroll;
+                p { padding:0 0 25px; }
+            }
+        }
+    }
+
+
+
+/*
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////// HOME
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
@@ -155,15 +267,6 @@ textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
         .slider_right { background-position:-147px 0px; right:-49px; }
 
         .wrapper { margin:14px 0 40px;
-            nav { height:43px; background:url(../img/sprite_3.png) 0 -60px; background-size:101% auto; margin:0 0 17px; padding:19px 140px 0; line-height:60px; overflow:hidden;
-                a { width:162px; min-width:90px; height:28px; position:relative; float:left; color:#fff; line-height:25px; font-size:14px; text-align:center;
-                    &:hover, &.active { background:#fff; color:@gray_1; text-decoration:none;
-                        &:before, &:after { content:' '; width:10px; height:1px; position:absolute; top:0; border-top:30px solid transparent; }
-                        &:before { left:-17px; border-right:8px solid #FFF; }
-                        &:after  { right:-14px; border-left:5px solid #FFF;}
-                    }
-                }
-            }
             .gallery { padding:17px 0 38px; overflow:hidden; }
             .film { width:33.33%; min-width:300px; float:left; padding:0 20px 38px 0;
                 &:hover { 
@@ -181,21 +284,18 @@ textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
                     span { padding:0 0 0 3px; color:@blue_1; font-weight:bold; letter-spacing:0.7px; }
                 }         
             }
-            button { height:19px; background:@blue_1; position:relative; padding:2px 12px 2px 24px; margin:16px 0 0; color:#fff; font-size:10px;
-                &:hover { background-color:#5688CE; }
-                &:after { content:' '; width:19px; height:19px; background:url(../img/sprite_1.png) -19px -32px; position:absolute; top:0; left:0; display:block; }
-            }
         } /* END OF wrapper*/
 
         article { width:50%; min-width:470px; float:left; padding:38px 10px 0 0;
-            &.style_1 { padding:0 0 70 10px; }
-            &>div { height:40px; padding:15px 0 13px; border-bottom:1px dotted @gray_3;
-                > img {  float:left; margin:-1px 5px 0 5px; display:block; }
+            &.style_1 {
+                div:after { content:' '; clear:both; display:table; }
+                .number { width:40px; float:right; margin:-4px 0 0; color:@blue_1; font-size:18px; font-weight:bold; text-align:right; }
+            }
+            & > div { padding:15px 0 13px; border-bottom:1px dotted @gray_3;
                 > a { text-decoration:none;
                     span { margin:0 5px; }
                     }
-                > p { float:left; line-height:10px; }
-                .number { width:40px; float:right; color:@blue_1; font-size:17px; text-align:right; line-height:9px; }
+                > p { float:left; line-height:16px; }
             }
             h2 { background:url(../img/sprite_4.png); padding:0 0 0 23px; font-size:25px; line-height:51px; color:#fff; }
             span, p { color:@gray_1; font-size:13px; }
@@ -287,26 +387,6 @@ textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
             p { font-weight:normal; font-size:15px; line-height:20px; color:@gray_1; }
             span { font-weight:bold; color:@gray_1; }
             b { color:#000; }
-        }
-    }
-
-
-
-
-
-/*
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////// BUSCA
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
-    .busca article { float:left; padding:0;
-        &>div { width:90%; height:60px; padding:10px 0 0 0;
-            > img { float:right; margin:-8px 5px 0 5px; }
-            > p { padding:3px 0 3px 0; font-weight:bold; font-size:14px; line-height:15px; color:#000; 
-                &.data { font-weight:normal; color:@gray_1; font-size:13px; } 
-            }
-            .number { float:left; line-height:40px; padding:0 10px; font-size:20px; color:#c2c3c6; }
         }
     }
 
@@ -613,3 +693,39 @@ textarea { font-family:'Roboto Condensed', Helvetica, Arial, sans-serif; }
 
     footer .footer_bg { height:25px; }
 }
+
+
+
+
+
+
+
+
+
+
+/*
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////// EXTRA
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/* Datepicker
+----------------------------------*/
+.js_datepicker { cursor:pointer; }
+.ui-datepicker { width:225px; background-color:#FFF; padding:2px; -webkit-border-radius:4px; border-radius:4px; -webkit-box-shadow:0 0 4px #222; box-shadow:0 0 4px #222; font-family:Helvetica, Arial, sans-serif; z-index:101 !important; display:none; }
+/* header */
+.ui-datepicker .ui-datepicker-header    { height:30px; background-color:#7DC6E9; background-image:-webkit-gradient(linear, left top, left bottom, from(#A5D8F4), to(#49AFD8)); background-image:-webkit-linear-gradient(top, #A5D8F4, #49AFD8); background-image:-moz-linear-gradient(top, #A5D8F4, #49AFD8); background-image:-o-linear-gradient(top, #A5D8F4, #49AFD8); background-image:linear-gradient(to bottom, #A5D8F4, #49AFD8); border:1px solid #999; -webkit-border-radius:4px; border-radius:4px; color:@gray_1; font-weight:bold; line-height:30px; }
+.ui-datepicker .ui-datepicker-prev      { float:left; }
+.ui-datepicker .ui-datepicker-next      { float:right; }
+.ui-datepicker .ui-datepicker-title     { text-align:center; }
+/* calendar */
+.ui-datepicker .ui-datepicker-calendar  { width:100%; color:@gray_1; }
+.ui-datepicker th                       { font-size:14px; line-height:30px; }
+.ui-datepicker .ui-state-default        { width:29px; background-color:#E6E6E6; background-image:-webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#D6D6D6)); background-image:-webkit-linear-gradient(top, #F4F4F4, #D6D6D6); background-image:-moz-linear-gradient(top, #F4F4F4, #D6D6D6); background-image:-o-linear-gradient(top, #F4F4F4, #D6D6D6); background-image:linear-gradient(to bottom, #F4F4F4, #D6D6D6);  margin:1px; border:1px solid #BBB; -webkit-border-radius:3px; border-radius:3px; color:#555; font-size:13px; line-height:22px; text-align:center; display:block; }
+.ui-datepicker a.ui-state-default:hover { background-color:#D3D3D3; background-image:none; border:1px solid #999; text-decoration:none; color:#111; }
+.ui-datepicker .ui-datepicker-other-month .ui-state-default { background-color:#F9F9F9; background-image:none; border:1px solid #DDD; color:#BBB; cursor:default; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { margin:4px; padding:4px; filter:alpha(opacity=50); opacity:0.5; }
+.ui-datepicker .ui-datepicker-prev:hover , .ui-datepicker .ui-datepicker-next:hover { filter:alpha(opacity=100); opacity:1; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { width:19px; height:18px; background-image:url(../img/sprite_1.png);  text-indent:-9456px; display:block; }        
+.ui-datepicker .ui-datepicker-prev span { background-position: 0   -18px; }
+.ui-datepicker .ui-datepicker-next span { background-position:0 0; }
