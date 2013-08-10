@@ -8,12 +8,18 @@ $(function() {
             this.tabs();
             this.pagination();
             this.file_upload();
+            this.edit_field();
 
             this.menu_page();
+            this.download_page();
 
             $(document).click(function(e) {
                 if($(e.target).parents('.menu').length === 0) {
                     $('.container > header .menu .dropdown').hide('slow');
+                }
+
+                if($(e.target).parents('.searchbar').length === 0) {
+                    $('.search_drop_down').hide('slow');
                 }
             });
         },
@@ -73,15 +79,20 @@ $(function() {
                     dataType:   'json',
                     data:       {word: value},
                     success:    function(data) {
-                        var string = '<div>';
+                        var string = '', string_content = '';
 
                         $.each(data, function(index, value) {
-                            string += '<button>' + value + '</button>';
+                            string_content += '<button>' + value + '</button>';
                         });
 
-                        string += '</div>';
-
-                        searchbar.append(string);
+                        if(searchbar.find('.search_drop_down').length === 0) {
+                            string = '<div class="search_drop_down">';
+                            string += string_content;
+                            string +='</div>'
+                            searchbar.append(string);
+                        } else {
+                            searchbar.find('.search_drop_down').show('slow').html(string_content);
+                        }
                     },
                     error:      function() {
                         alert('The server is not responding. We apologize!');
@@ -288,9 +299,67 @@ $(function() {
 
 
 
+
     /*
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      ///////////// MENU
+      ///////////// EDIT FIELD
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    */
+
+      edit_field: function() {
+        var item_edit = $('.js_edit_field'),
+
+            update_number = function(target) {
+                var parent = target.parents('.dates'),
+                    value = target.val(),
+                    a, b, c;
+
+                if(target.val() === '') {
+                    value = target.prop('placeholder');
+                }
+                target.parent().html('<span>' + value + '</span> minutos');
+
+                a     = parent.children('div:eq(3)').find('div span').html(),
+                b     = parent.children('div:eq(4)').find('div span').html(),
+                c     = parent.children('div:eq(5)').find('div span').html();
+                parent.siblings('figure').find('b').html(Math.round(b / a * 70  +  c / a * 30));
+            };
+
+
+        if(item_edit.length > 0) {
+            item_edit.click(function(e) {
+                var that  = $(this),
+                    value = that.find('span').html();
+
+                if(value) {
+                    that.html('<input type="text" placeholder="' + value + '" />');
+                    that.find('input').focus();
+                }
+
+                e.preventDefault();
+            });
+
+            item_edit.on('blur', 'input', function() { update_number($(this)); });
+
+            item_edit.on('keyup', 'input', function(e) {
+                if(this.value !== this.value.replace(/[^0-9\.]/g, '')) {
+                    this.value = this.value.replace(/[^0-9\.]/g, '');
+                } else if(this.value > 1000) {
+                    this.value = 1000;
+                }
+
+                if(e.which === 13) {
+                     update_number($(this));
+                }
+            });
+        }
+      },
+
+
+
+    /*
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ///////////// PAGES
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     */
         menu_page: function() {
@@ -301,9 +370,27 @@ $(function() {
                     $(this).find('input').datepicker('show');
                 });
             }
-        }
+        },
         
-    
+        download_page: function() {
+            if($('.js_more_less').length > 0) {
+                $('.js_more_less').click(function(e) {
+                    var that = $(this),
+                        parent = that.parents('.first');
+
+                    if(that.hasClass('active')) {
+                        that.removeClass('active');
+                        that.find('button').html('LEIA MAIS');
+                        parent.css({'height': '400px'});
+                    } else {
+                        that.addClass('active');
+                        that.find('button').html('LEIA MENOS');
+                        parent.css({'height': 'auto'});
+                    }
+                    e.preventDefault();
+                });
+            }
+        }
     }
 
 
