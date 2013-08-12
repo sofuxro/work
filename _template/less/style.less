@@ -1,0 +1,29 @@
+/*################################
+  #                              #
+  #      by Claudiu Limban       #
+  #  http://sofuxro.elance.com   #
+  #                              #
+  ################################*/
+
+
+.gradient(@fb, @top, @bot) { background-color:@fb; background-image:-webkit-linear-gradient(top, @top, @bot); background-image:-moz-linear-gradient(top, @top, @bot); background-image:-o-linear-gradient(top, @top, @bot); background-image:linear-gradient(to bottom, @top, @bot); }
+
+
+
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,button,cite,code,del,dfn,em,fieldset,figure,font,img,input,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,select,tbody,textarea,tfoot,thead,tr,th,td{margin:0;padding:0;border:0 none;outline:0 none;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0 none}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}a,button,input[type="submit"],input[type="reset"]{cursor:pointer}a{text-decoration:none}a:hover{text-decoration:underline}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,details{display:block;}img{color:transparent;font-size:0;vertical-align:middle;-ms-interpolation-mode:bicubic;}svg{overflow:hidden;}p,a{word-wrap:break-word;}
+/* end of reset */
+/* Golden ratio (0.62 + 0.38) -> for 1200px = 744px + 456px */
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+.clear { height:0; width:0; clear:both; }
+.hidden { display:none; }
+.clearfix() {
+    &:before, &:after { content:" "; display:table; }
+    &:after { clear:both; }
+}
+
+
+html, body { min-height:100%; }
+body { font-family:Arial, Helvetica, sans-serif; }

@@ -22,6 +22,12 @@ $(function() {
                     $('.search_drop_down').hide('slow');
                 }
             });
+
+            $.datepicker.setDefaults({
+                dateFormat:  "dd.mm.yy",
+                dayNamesMin: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],
+                monthNames:  ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Septembro", "Autubro", "Novembro", "Dezembro"]
+            });
         },
 
 
@@ -364,7 +370,7 @@ $(function() {
     */
         menu_page: function() {
             if($('.js_datepicker').length > 0) {
-                $('.js_datepicker').find('input').datepicker({ dateFormat: "dd.mm.yy" });
+                $('.js_datepicker').find('input').datepicker();
 
                 $('.js_datepicker').click(function() {
                     $(this).find('input').datepicker('show');

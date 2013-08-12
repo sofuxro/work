@@ -503,6 +503,19 @@ header .login_box a {
   ///////////// Common
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+.middle input[type="text"],
+.middle input[type="password"],
+.middle textarea {
+  width: 100%;
+  height: 27px;
+  padding: 3px 6px;
+  margin: 0 20px 20px 0;
+  border: 1px solid #bcbec0;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.15) inset;
+  font-size: 15px;
+  color: #58595b;
+  display: block;
+}
 .btn {
   height: 19px;
   background: #2c61aa;
@@ -786,7 +799,10 @@ header .login_box a {
 .items_info  > div .dates  > div input {
   width: 140px;
   float: right;
+  margin: 0;
   padding: 0 0 0 30px;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
   color: #58595b;
   text-align: left;
 }
@@ -814,6 +830,7 @@ header .login_box a {
 .items_info  > div .dates .js_datepicker input {
   height: 17px;
   padding: 0 0 0 29px;
+  cursor: pointer;
 }
 .item_text {
   padding: 32px 0 0;
@@ -1155,10 +1172,10 @@ header .login_box a {
 .middle aside label {
   position: relative;
   margin: 5px 0;
+  color: #231f20;
   font-weight: bold;
   font-size: 15px;
   line-height: 25px;
-  color: #231f20;
   display: block;
 }
 .middle aside label span {
@@ -1172,18 +1189,6 @@ header .login_box a {
   right: 0px;
   font-size: 10px;
   color: #58595b;
-}
-.middle aside input[type="text"],
-.middle aside input[type="password"] {
-  width: 100%;
-  height: 25px;
-  padding: 3px 6px;
-  margin: 0 20px 20px 0;
-  border: 1px solid #bcbec0;
-  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.15) inset;
-  font-size: 15px;
-  color: #58595b;
-  display: block;
 }
 .middle aside button.style1 {
   height: 25px;
@@ -1316,6 +1321,98 @@ header .login_box a {
 }
 .menu aside .member b {
   color: #000;
+}
+.nove_traducoa {
+  padding: 30px 0 0;
+}
+.nove_traducoa label {
+  margin: 5px 0;
+  color: #231f20;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  display: block;
+}
+.nove_traducoa .slider_left,
+.nove_traducoa .slider_right {
+  bottom: auto;
+  top: 310px;
+}
+.nove_traducoa aside {
+  width: 50%;
+  min-width: 460px;
+  min-height: 360px;
+  margin: 0 0 40px;
+}
+.nove_traducoa aside.style_1 {
+  padding: 0 0 0 30px;
+}
+.nove_traducoa aside textarea {
+  height: 253px;
+}
+.nove_traducoa .dates  > div {
+  min-height: 36px;
+}
+.nove_traducoa .dates  > div:before,
+.nove_traducoa .dates  > div:after {
+  content: " ";
+  display: table;
+}
+.nove_traducoa .dates  > div:after {
+  clear: both;
+}
+.nove_traducoa .dates label {
+  width: 130px;
+  float: left;
+  display: inline-block;
+}
+.nove_traducoa .dates input.style_1 {
+  width: 100px;
+  margin: 8px 10px 0 77px;
+  display: inline-block;
+}
+.nove_traducoa .dates input.style_2 {
+  width: 200px;
+  margin: 12px 0 0 177px;
+  border: 0 none;
+  box-shadow: 0 0 0 0;
+}
+.nove_traducoa .dates .inactive label {
+  color: #A3A4A6;
+}
+.nove_traducoa .dates .inactive div {
+  margin: 10px 0 0 207px;
+  color: #A3A4A6;
+  font-size: 15px;
+}
+.nove_traducoa .dates .js_datepicker {
+  position: relative;
+  cursor: pointer;
+}
+.nove_traducoa .dates .js_datepicker:after {
+  content: ' ';
+  width: 19px;
+  height: 18px;
+  background: url(../img/sprite_1.png) -215px 0;
+  position: absolute;
+  top: 11px;
+  right: 110px;
+  display: block;
+}
+.nove_traducoa .dates .js_datepicker label {
+  cursor: pointer;
+}
+.nove_traducoa .dates .js_datepicker input {
+  height: 17px;
+  padding: 0 0 0 29px;
+  cursor: pointer;
+}
+.nove_traducoa .btn.style_1 {
+  height: 32px;
+  padding: 2px 4px;
+  margin: 70px auto 0;
+  font-size: 19px;
+  display: block;
 }
 /*
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2412,15 +2509,16 @@ footer .footer_bg {
 .ui-datepicker .ui-datepicker-header {
   height: 30px;
   background-color: #7DC6E9;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#a5d8f4), to(#49afd8));
-  background-image: -webkit-linear-gradient(top, #a5d8f4, #49afd8);
-  background-image: -moz-linear-gradient(top, #a5d8f4, #49afd8);
-  background-image: -o-linear-gradient(top, #a5d8f4, #49afd8);
-  background-image: linear-gradient(to bottom, #a5d8f4, #49afd8);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#67a0d3), to(#3d7cbf));
+  background-image: -webkit-linear-gradient(top, #67a0d3, #3d7cbf);
+  background-image: -moz-linear-gradient(top, #67a0d3, #3d7cbf);
+  background-image: -o-linear-gradient(top, #67a0d3, #3d7cbf);
+  background-image: linear-gradient(to bottom, #67a0d3, #3d7cbf);
   border: 1px solid #999;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  color: #58595b;
+  color: #FFF;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   font-weight: bold;
   line-height: 30px;
 }
@@ -2438,7 +2536,7 @@ footer .footer_bg {
   color: #58595b;
 }
 .ui-datepicker th {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 30px;
 }
 .ui-datepicker .ui-state-default {
@@ -2497,5 +2595,5 @@ footer .footer_bg {
   background-position: 0 -18px;
 }
 .ui-datepicker .ui-datepicker-next span {
-  background-position: 0 0;
+  background-position: 0 -1px;
 }
