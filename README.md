@@ -44,7 +44,7 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 
 ## Contact
 
-I'm UTC+2 timezone
+I'm in UTC+2 timezone
 
 * [elance.com](http://sofuxro.elance.com)
 * [linkedin.com](http://www.linkedin.com/in/claudiulimban)
