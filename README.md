@@ -21,11 +21,11 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 ##Technologies Used:
 
 * HTML5 and CSS3
-* [Bootstrap](http://twitter.github.io/bootstrap/)
+* [Bootstrap 4](http://getbootstrap.com/), [Foundation 4] (http://foundation.zurb.com/)
 * [Less](http://lesscss.org/)
 * AJAX
 * [jQuery](http://jquery.com/)
-* [Backbone.js](http://backbonejs.org/)
+* [Backbone.js](http://backbonejs.org/), [Marionette] (http://marionettejs.com/)
 * [Node.js](http://nodejs.org/)
 * [Google fonts](http://www.google.com/fonts/), [Font-Awesome](http://fortawesome.github.io/Font-Awesome/)
 * [YSlow](http://developer.yahoo.com/yslow/)
