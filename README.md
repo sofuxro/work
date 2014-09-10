@@ -48,4 +48,4 @@ I'm in UTC+2 timezone
 
 * [elance.com](http://sofuxro.elance.com)
 * [linkedin.com](http://www.linkedin.com/in/claudiulimban)
-* [claudiu.limban.ro](http://claudiu.limban.ro)
+* [claudiu.limban.ro](http://claudiu.limban.ro/about.html)
