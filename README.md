@@ -28,7 +28,7 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 * [Backbone.js](http://backbonejs.org/), [Marionette] (http://marionettejs.com/)
 * [Node.js](http://nodejs.org/)
 * [Google fonts](http://www.google.com/fonts/), [Font-Awesome](http://fortawesome.github.io/Font-Awesome/)
-* [YSlow](http://developer.yahoo.com/yslow/)
+* [YSlow](http://developer.yahoo.com/yslow/), [PageSpeed](https://developers.google.com/speed/pagespeed/)
 
 
 ## Work Sample
