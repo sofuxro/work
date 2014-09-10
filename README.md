@@ -10,12 +10,12 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 
 * Search engine friendly HTML5 & CSS3 Conversion
 * W3C valid and table-less layout
-* Cross browser compatibility - Chrome, Firefox, IE8+, Safari, Opera
+* Cross browser compatibility - Chrome, Firefox, IE9+, Safari, Opera
 * Page load optimization - Load Optimization, YSlow, Image Sprite
 * Special fonts - Google fonts, Font-Awesome
 * JavaScript - AJAX, jQuery, bootstrap.js, backbone.js
 * Responsive content,for all range of screen resolutions - Bootstrap
-* Mobile compatibility
+* Mobile compatibility (iPad, iPhone, Android device)
  
 
 ##Technologies Used:
