@@ -1,2 +1,6 @@
 .DS_Store
 *.md
+.sass-cache
+build
+Desktop.ini
+node_modules
