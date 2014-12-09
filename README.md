@@ -33,12 +33,11 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 
 ## Work Sample
 
-* [www.asigcasa.ro](http://www.asigcasa.ro)
 * [couponwallet](http://www.webfirme.ro/couponwallet/deals.html)
-* [wonderjunk](http://www.webfirme.ro/wonderjunk/project_7/)
 * [www.inspiredexteriors.com.au](http://www.inspiredexteriors.com.au/)
 * [www.kobipets.com](http://www.kobipets.com)
 * [www.different.com.au](http://www.different.com.au/)
+* [www.asigcasa.ro](http://www.asigcasa.ro)
  
 
 
@@ -46,6 +45,7 @@ I'm a web programmer with more than 6 years experience opened for a long term co
 
 I'm in UTC+2 timezone
 
+* [www.teranacreative.com](http://www.teranacreative.com)
 * [elance.com](http://sofuxro.elance.com)
 * [linkedin.com](http://www.linkedin.com/in/claudiulimban)
 * [claudiu.limban.ro](http://claudiu.limban.ro/about.html)
